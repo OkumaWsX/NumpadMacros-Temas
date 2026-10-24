@@ -1,0 +1,56 @@
+# Revisa los temas y arma catalogo.json (lo que lee Numpad Macros en la pestaña Temas).
+# - En un Pull Request: solo revisa (firma, versión, tamaño, nombres) y avisa qué está mal.
+# - Al subir a main: revisa y, si algo cambió, guarda el catalogo.json nuevo.
+name: Catálogo de temas
+
+on:
+  push:
+    branches: [main]
+    paths: ["oficiales/**", "comunidad/**", "tools/**", ".github/workflows/catalogo.yml"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: catalogo
+  cancel-in-progress: false
+
+jobs:
+  catalogo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # El mismo lector de temas que usa la app (npm/npt.py): verifica firma y contenido
+      - uses: actions/checkout@v4
+        with:
+          repository: OkumaWsX/NumpadMacros
+          path: app
+          sparse-checkout: npm
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Dependencias
+        run: pip install -q "cryptography>=41"
+
+      - name: Revisar los temas
+        if: github.event_name == 'pull_request'
+        run: python tools/armar_catalogo.py --app app --revisar
+
+      - name: Armar el catálogo
+        if: github.event_name != 'pull_request'
+        run: python tools/armar_catalogo.py --app app
+
+      - name: Guardar catalogo.json
+        if: github.event_name != 'pull_request'
+        run: |
+          if git diff --quiet -- catalogo.json; then echo "Sin cambios"; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add catalogo.json
+          git commit -m "Catálogo actualizado"
+          git push

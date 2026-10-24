@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+app/
+# Claves de firma: nunca se suben
+*.key
+*.npkey
