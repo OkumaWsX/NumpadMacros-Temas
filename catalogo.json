@@ -1,5 +1,81 @@
 {
  "formato": 1,
- "generado": "2026-10-24T10:21:20Z",
- "temas": []
+ "generado": "2026-10-25T03:42:51Z",
+ "temas": [
+  {
+   "id": "creador/aquamanchileno/dos-mares",
+   "origen": "creador",
+   "nombre": "Dos Mares · AquamanChileno",
+   "autor": "OkumaWsX",
+   "huella_autor": "3B5F 70BA B1DB A08F · 994A 1464 A6AC F067",
+   "creador": "AquamanChileno",
+   "creador_info": {
+    "nombre": "AquamanChileno",
+    "bio": "Creador de contenido digital y cosplayer chileno. Transmite juegos de todo tipo, con especial gusto por el terror.",
+    "redes": [
+     {
+      "red": "twitch",
+      "url": "https://www.twitch.tv/aquamanchileno"
+     },
+     {
+      "red": "youtube",
+      "url": "https://www.youtube.com/@AquamanChileno"
+     },
+     {
+      "red": "tiktok",
+      "url": "https://www.tiktok.com/@aquamanchileno"
+     }
+    ],
+    "avatar": {
+     "archivo": "creadores/aquamanchileno/avatar.png",
+     "sha256": "389618e829302b4f223814d83962d8e5337a9671283706d3eedcdd7a9d2e2255",
+     "tamano": 122277
+    }
+   },
+   "version": "1.2",
+   "fecha": "2026-10-22",
+   "descripcion": "Este tema combina su ilustración y video con degradados.",
+   "etiquetas": [
+    "oscuro",
+    "imágenes",
+    "transparencia"
+   ],
+   "requiere_app": "3.5.0",
+   "archivo": "creadores/aquamanchileno/dos-mares/1.2/tema.npt",
+   "sha256": "1277489e73ba74afc17693bf709dce93a94ca3377074b67b0a30609cd1765f03",
+   "tamano": 128637,
+   "estilo": "oscuro",
+   "color": "amarillo",
+   "colores": {
+    "bg": "#0e1d22",
+    "panel": "#12242a",
+    "panel2": "#192c34",
+    "line": "#284048",
+    "text": "#dec8c1",
+    "muted": "#bea39a",
+    "acc": "#d4ad51",
+    "on_acc": "#161c2d",
+    "acc_hover": "#dfbd6d",
+    "acc_dim": "#665228",
+    "acc_bg": "#322b1c",
+    "key": "#1d3339",
+    "key_set": "#203d48",
+    "key_set_line": "#57a2ad",
+    "key_set_text": "#e7d3cc",
+    "key_global": "#362e21",
+    "key_global_line": "#ae8d46",
+    "key_global_text": "#c3cfe2",
+    "ok": "#72bdb4",
+    "on_ok": "#3b1d20",
+    "bad": "#e2877c",
+    "warn": "#d5c38a"
+   },
+   "extras": {
+    "imagenes": 7,
+    "animado": false,
+    "transparencia": true,
+    "degradado": false
+   }
+  }
+ ]
 }
