@@ -1,0 +1,19 @@
+{
+ "nombre": "AquamanChileno",
+ "bio": "Creador de contenido digital y cosplayer chileno. Transmite juegos de todo tipo, con especial gusto por el terror.",
+ "redes": [
+  {
+   "red": "twitch",
+   "url": "https://www.twitch.tv/aquamanchileno"
+  },
+  {
+   "red": "youtube",
+   "url": "https://www.youtube.com/@AquamanChileno"
+  },
+  {
+   "red": "tiktok",
+   "url": "https://www.tiktok.com/@aquamanchileno"
+  }
+ ],
+ "avatar": "avatar.png"
+}
